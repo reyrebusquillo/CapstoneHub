@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="image container/ix.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Community</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white; 
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px 0; 
+    }
+
+    header {
+      position: fixed; 
+      top: 0;
+      width: 100%;
+      background-color: white; 
+      padding: 20px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+      overflow: auto; 
+      transition: background-color 0.3s ease;
+    }
+
+    .logo {
+      float: left;
+      margin-right: 20px; 
+      margin-top: 10px; 
+    }
+
+    .logo h1 {
+      margin: 0; 
+      font-size: 28px; 
+      color: #333; 
+    }
+
+    nav {
+      float: right;
+      margin-top: 10px; 
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav ul li {
+      display: inline-block; 
+      margin-left: 20px;
+      transition: transform 0.3s ease; 
+    }
+
+    nav ul li:first-child {
+      margin-left: 0; 
+    }
+
+    nav ul li a {
+      display: block; 
+      padding: 10px 15px; 
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.1);
+    }
+
+    nav ul li a i {
+      font-size: 24px; 
+    }
+
+    section {
+      padding: 100px 0 50px; 
+      text-align: center;
+    }
+
+    section h1, section h2 {
+      margin-bottom: 20px;
+      color: #333; 
+      transition: color 0.3s ease;
+    }
+
+    section h1 {
+      font-size: 32px; 
+    }
+
+    section p {
+      font-family: "Cormorant Infant", serif;
+      font-size: 14px; 
+      color: #666; 
+      line-height: 1.6;
+      transition: color 0.3s ease; 
+    }
+
+    .home-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .home-image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .home-image img {
+      max-width: 100%; 
+      height: auto; 
+    }
+
+    .home-cta {
+      flex: 1;
+      text-align: left;
+    }
+
+    .home-cta button {
+      padding: 10px 20px;
+      font-size: 18px; 
+      background-color: transparent; 
+      color: black; 
+      border: 2px solid black; 
+      border-radius: 15px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .home-cta button:hover {
+      background-color: white; 
+      color: black; 
+      transform: scale(1.1);
+    }
+
+    .about-section {
+  position: relative;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-image {
+  flex: 1;
+  text-align: left;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto; 
+  transition: transform 0.3s ease;
+}
+
+.home-cta {
+  flex: 1;
+  text-align: left;
+}
+
+.about-heading {
+  color: #5CC0F1;
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+.about-description {
+  color: #666;
+  font-size: 22px; 
+  line-height: 1.6; 
+  margin-bottom: 20px; 
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px; 
+  transition: margin-top 0.3s ease;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.card p {
+  transition: color 0.3s ease;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+    .services {
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  height: 100vh; 
+}
+
+.containerS {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  width: 90%; 
+  max-width: 1000px; 
+  height: 90%; 
+  max-height: 600px; 
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0 30px 50px white;
+}
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+.item{
+    width:200px;
+    height:300px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow:  0 30px 50px #505050;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+    left:0;
+    top:0;
+    transform: translate(0,0);
+    border-radius: 10;
+    width:100%;
+    height:100%;
+    box-shadow: none;
+}
+.item:nth-child(3){
+    left:50%;
+}
+.item:nth-child(4){
+    left:calc(50% + 220px);
+}
+.item:nth-child(5){
+    left:calc(50% + 440px);
+}
+.item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top:50%;
+    left:100px;
+    width:300px;
+    text-align: left;
+    padding:0;
+    color:#d5d3d3;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+}
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+    margin:20px 0;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item button{
+    padding:10px 20px;
+    border:none;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+}
+.buttons{
+    position: absolute;
+    bottom:30px;
+    z-index: 222222;
+    text-align: center;
+    width:100%;
+}
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: background-color 0.5s;
+}
+
+.buttons button:hover {
+    background-color: transparent;
+}
+@keyframes showHomeContent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+.home-content {
+    opacity: 0;
+    animation: showHomeContent 1s ease-in-out forwards; 
+}
+
+.home-image img {
+    opacity: 0; 
+    animation: showHomeContent 1s ease-in-out forwards;
+}
+
+.contact-image {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-image img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.contact-image {
+  flex: 0 0 auto; 
+  margin-right: 20px; 
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; 
+}
+
+.cardc {
+  background-color: #fff;
+  padding: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardc:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+.button_see{
+  border-radius: 15px;
+  border: 1px solid #923a3a;
+  transition: background-color 0.5s;
+}
+
+.button_see:hover {
+    background-color: transparent;
+}
+
+
+
+ @media only screen and (max-width: 576px) {
+  
+
+
+  
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <h1 style="font-family: Diplomata SC, serif;">CS Capstone Hub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Add the icon here -->
+        <li><a href="#"><i class='bx bx-menu'></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<button id="homeButton">Home</button>
+<section id="home">
+  <div class="container">
+    <div class="home-content">
+      <div class="home-cta">
+        <h1>Welcome to The ForeFront Of Technology!</h1>
+        <p style="font-family: Cormorant Infant, serif; font-size: 18px;">We're thrilled to have you here! At CS Capstone Hub, we're dedicated to empowering computer science students like you with customized capstone projects tailored to your interests and goals. Explore our curated collection of projects spanning various categories, from artificial intelligence and machine learning to web development and cybersecurity. Whether you're passionate about data science, mobile app development, or game design, we've got something for everyone.</p>
+        <br>
+        <button style="font-family: Rubik Doodle Shadow, system-ui;">Join Our World</button>
+      </div>
+      <div class="home-image">
+        <img src="image container/logo.jpg" alt="Placeholder image">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="home-content">
+      <!-- Image -->
+      <div class="about-image">
+        <img src="image container/about.jpg" alt="About Image">
+      </div>
+      
+      
+      <div class="home-cta">
+        <h2 class="about-heading">About Us</h2>
+        <p class="about-description">Welcome to CS Capstone Hub, your premier destination for innovative capstone project support in the field of computer science. Founded with a passion for fostering creativity and excellence in student projects, we are dedicated to empowering the next generation of technology leaders.</p>
+        
+    
+        <div class="card-container">
+          <div class="card">
+            <h3 style="color: #5CC0F1;">Empowerment</h3>
+            <p>Inspire, Equip, Empower</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #5CC0F1;">Innovation</h3>
+            <p>Create, Invent, Revolutionize</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #5CC0F1;">Collaboration</h3>
+            <p>Unite, Engage, Cooperate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  <section id="services" class="services">
+    <div class="containerS">
+      <div id="slide">
+          <div class="item" style="background-image: url('image container/cvip.jpg');">
+              <div class="content">
+                  <div class="name">Computer Vision and Image Processing</div>
+                  <div class="des">
+                    Computer vision and image processing involve interpreting and manipulating visual data through techniques such as object recognition, image enhancement, and depth estimation, with applications spanning industries like healthcare, automotive, and entertainment.</div>
+                  <button class="button_see">See more</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url('image container/nlpta.jpg');">
+              <div class="content">
+                  <div class="name">Natural Language Processing and Text Analytics</div>
+                  <div class="des">Natural Language Processing (NLP) and Text Analytics focus on the interpretation and analysis of human language, enabling tasks such as sentiment analysis, named entity recognition, and language translation, with applications across various domains including customer service, market research, and information retrieval.</div>
+                  <button class="button_see">See more</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url('image container/aiml.jpg');">
+              <div class="content">
+                  <div class="name">Artificial Intelligence and Machine Learning</div>
+                  <div class="des">Artificial Intelligence (AI) and Machine Learning (ML) involve teaching computers to learn from data and make autonomous decisions, revolutionizing industries through applications like image recognition, natural language processing, and predictive analytics, driving innovation and efficiency in diverse fields.</div>
+                  <button class="button_see">See more</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url('image container/cns.jpg');">
+              <div class="content">
+                  <div class="name">Cybersecurity and Network Security</div>
+                  <div class="des">Cybersecurity and Network Security entail protecting digital assets through measures like encryption and intrusion detection systems, crucial in safeguarding against unauthorized access and breaches in interconnected environments.</div>
+                  <button class="button_see">See more</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url('image container/gd.jpg');">
+              <div class="content">
+                  <div class="name">Game Development</div>
+                  <div class="des">Game Development involves the creation of interactive experiences, encompassing design, programming, art, and sound to craft immersive worlds and engaging gameplay, spanning genres from mobile apps to console blockbusters, driving innovation and entertainment in the gaming industry.</div>
+                  <button class="button_see">See more</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url('image container/iotes.jpg');">
+              <div class="content">
+                  <div class="name">Internet of Things and Embedded Systems</div>
+                  <div class="des">Internet of Things (IoT) and Embedded Systems involve connecting devices and enabling data communication, facilitating automation and smart functionality in diverse domains such as home automation and industrial monitoring, driving innovation in interconnected environments.</div>
+                  <button class="button_see">See more</button>
+              </div>
+          </div>
+          <div class="item" style="background-image: url('image container/mad.jpg');">
+            <div class="content">
+                <div class="name">Mobile Application Development</div>
+                <div class="des">Mobile Application Development entails designing and creating software applications for mobile devices, focusing on user experience and functionality to deliver seamless experiences across platforms, driving innovation in the digital landscape.</div>
+                <button class="button_see">See more</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('image container/sed.jpg');">
+          <div class="content">
+              <div class="name">Software Engineering and Development</div>
+              <div class="des">Software Engineering and Development involve the systematic approach to designing, building, and maintaining software systems, emphasizing quality, efficiency, and scalability to meet diverse user needs and drive technological advancements.</div>
+              <button class="button_see">See more</button>
+          </div>
+      </div>
+      <div class="item" style="background-image: url('image container/wdd.jpg');">
+        <div class="content">
+            <div class="name">Web Development and Design</div>
+            <div class="des">Web Development and Design integrate programming languages and design principles to create visually appealing and functional websites, enhancing user experiences and accessibility online.</div>
+            <button class="button_see">See more</button>
+        </div>
+    </div>
+    <div class="item" style="background-image: url('image container/dabda.jpg');">
+      <div class="content">
+          <div class="name">Data Science and Big Data Analytics</div>
+          <div class="des">Data Science and Big Data Analytics involve extracting insights from large datasets using statistical analysis and machine learning techniques, driving informed decision-making and innovation across various industries by uncovering patterns and trends in data.</div>
+          <button class="button_see">See more</button>
+      </div>
+  </div>
+      </div>
+      <div class="buttons">
+          <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+          <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+  </div>
+  </section>
+  
+  
+  <section id="contact">
+    <div class="container">
+      <div class="contact-content">
+        
+        <div class="contact-image">
+          <img src="image container/contact.jpg" alt="Contact Image">
+        </div>
+  
+     
+        <div class="contact-cards">
+        
+          <div class="cardc">
+            <h3>CONTACT US</h3>
+            <br>
+            <p>Contact us for a quote, help, or to join the team</p>
+            <p>
+              <a href="https://www.facebook.com" style="color: black; text-decoration: none;"><i class='bx bxl-facebook-circle' style="font-size: 26px;"></i></a>
+              <a href="https://www.twitter.com" style="color: black; text-decoration: none;"><i class='bx bxl-twitter' style="font-size: 26px;"></i></a>
+              <a href="https://www.instagram.com" style="color: black; text-decoration: none;"><i class='bx bxl-instagram-alt' style="font-size: 26px;"></i></a>
+              <a href="https://www.pinterest.com" style="color: black; text-decoration: none;"><i class='bx bxl-pinterest-alt' style="font-size: 26px;"></i></a>
+            </p>
+          </div>
+          
+          
+          
+          <div class="cardc">
+            <h3><i class='bx bx-map'></i> Address</h3>
+            <br>
+            <p>Olivarez Homes South, Santo Tomas, Biñan, Laguna</p>
+          </div>
+          
+  
+          <div class="cardc">
+            <h3><i class='bx bxs-envelope'></i> Email</h3>
+            <br>
+            <p><a href="mailto:reyrebusquillo13@gmail.com" style="color: black; text-decoration: none;">reyrebusquillo13@gmail.com</a>, <a href="mailto:reyrebusquillo66@gmail.com" style="color: black; text-decoration: none;">reyrebusquillo66@gmail.com</a></p>
+          </div>
+          
+          
+          <div class="cardc">
+            <h3><i class='bx bx-phone'></i> Call Us</h3>
+            <br>
+            <p><a href="tel:09159529074" style="color: black; text-decoration: none;">0915-952-9074</a> <br> <a href="tel:09363082287" style="color: black; text-decoration: none;">0936-308-2287</a></p>
+          </div>
+          
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+
+  <script src="script.js"></script>
+
+  <script>
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+     window.addEventListener('load', function() {
+    
+    document.querySelector('header').classList.add('smooth-transition');
+    document.querySelector('.logo').classList.add('smooth-transition');
+  });
+
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1, 
+    spaceBetween: 30, 
+    grabCursor: true, 
+    centeredSlides: true, 
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  document.getElementById('next').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
+
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function triggerHomeAnimation() {
+    var homeContent = document.querySelector(".home-content");
+    var homeImage = document.querySelector(".home-image img");
+    if (isInViewport(homeContent) && !homeContent.classList.contains("animate-home-content")) {
+        homeContent.classList.add("animate-home-content");
+        homeImage.classList.add("animate-home-content");
+    }
+}
+
+
+window.addEventListener("load", triggerHomeAnimation);
+
+
+window.addEventListener("scroll", triggerHomeAnimation);
+
+
+document.getElementById("homeButton").addEventListener("click", function() {
+    triggerHomeAnimation();
+});
+
+
+
+  
+  </script>
+  
+  </body>
+  </html>
+  
